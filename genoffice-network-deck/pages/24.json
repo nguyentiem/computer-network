@@ -1,0 +1,269 @@
+{
+  "title": "CGNAT đặt thêm một lớp dịch",
+  "type": "content",
+  "layout": "timeline_horizontal",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "NAT",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "CGNAT đặt thêm một lớp dịch",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "24",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 66,
+      "y": 217,
+      "w": 342,
+      "h": 233,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 87,
+      "y": 245,
+      "w": 302,
+      "h": 41,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "THIẾT BỊ",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 86,
+      "y": 331,
+      "w": 305,
+      "h": 55,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "192.168.1.10",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 410,
+      "y": 330,
+      "w": 55,
+      "h": 1,
+      "stroke": {
+        "color": "#D8912E",
+        "widthPt": 4
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 466,
+      "y": 217,
+      "w": 342,
+      "h": 233,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 487,
+      "y": 245,
+      "w": 302,
+      "h": 41,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ROUTER NHÀ",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 486,
+      "y": 331,
+      "w": 305,
+      "h": 55,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "100.72.1.8 WAN",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 810,
+      "y": 330,
+      "w": 55,
+      "h": 1,
+      "stroke": {
+        "color": "#D8912E",
+        "widthPt": 4
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 866,
+      "y": 217,
+      "w": 342,
+      "h": 233,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 887,
+      "y": 245,
+      "w": 302,
+      "h": 41,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "CGNAT ISP",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 886,
+      "y": 331,
+      "w": 305,
+      "h": 55,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "203.0.113.10 public",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 84,
+      "y": 539,
+      "w": 1095,
+      "h": 81,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "100.64.0.0/10 là Shared Address Space. Port forwarding trên router nhà không cấu hình được CGNAT của ISP.",
+              "sizePt": 20,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

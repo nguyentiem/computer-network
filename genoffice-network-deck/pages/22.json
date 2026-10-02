@@ -1,0 +1,500 @@
+{
+  "title": "Gõ https://example.com rồi Enter",
+  "type": "content",
+  "layout": "left_text_right_image",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ỨNG DỤNG",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Gõ https://example.com rồi Enter",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "22",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 59,
+      "y": 197,
+      "w": 213,
+      "h": 322,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 79,
+      "y": 220,
+      "w": 180,
+      "h": 75,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "1",
+              "sizePt": 45,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 77,
+      "y": 327,
+      "w": 180,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "DNS / cache",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 77,
+      "y": 405,
+      "w": 180,
+      "h": 70,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "tên → IP",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 273,
+      "y": 351,
+      "w": 28,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 302,
+      "y": 197,
+      "w": 213,
+      "h": 322,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 322,
+      "y": 220,
+      "w": 180,
+      "h": 75,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "2",
+              "sizePt": 45,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 320,
+      "y": 327,
+      "w": 180,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "route / ARP",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 320,
+      "y": 405,
+      "w": 180,
+      "h": 70,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "next hop → MAC",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 516,
+      "y": 351,
+      "w": 28,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 545,
+      "y": 197,
+      "w": 213,
+      "h": 322,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 565,
+      "y": 220,
+      "w": 180,
+      "h": 75,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "3",
+              "sizePt": 45,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 563,
+      "y": 327,
+      "w": 180,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TCP",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 563,
+      "y": 405,
+      "w": 180,
+      "h": 70,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "bắt tay :443",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 759,
+      "y": 351,
+      "w": 28,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 788,
+      "y": 197,
+      "w": 213,
+      "h": 322,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 808,
+      "y": 220,
+      "w": 180,
+      "h": 75,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "4",
+              "sizePt": 45,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 806,
+      "y": 327,
+      "w": 180,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TLS",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 806,
+      "y": 405,
+      "w": 180,
+      "h": 70,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "xác thực + khóa",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 1002,
+      "y": 351,
+      "w": 28,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 1031,
+      "y": 197,
+      "w": 213,
+      "h": 322,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 1051,
+      "y": 220,
+      "w": 180,
+      "h": 75,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "5",
+              "sizePt": 45,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1049,
+      "y": 327,
+      "w": 180,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "HTTP",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1049,
+      "y": 405,
+      "w": 180,
+      "h": 70,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "GET / response",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 81,
+      "y": 572,
+      "w": 1105,
+      "h": 62,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Giả định HTTP/2 trên TCP/IPv4. Với HTTP/3, bước 3–4 được QUIC/TLS thay thế.",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

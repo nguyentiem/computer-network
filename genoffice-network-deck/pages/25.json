@@ -1,0 +1,194 @@
+{
+  "title": "Trả lời trên kết nối cũ ≠ mở kết nối mới",
+  "type": "content",
+  "layout": "two_column_comparison",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "NAT",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Trả lời trên kết nối cũ ≠ mở kết nối mới",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "25",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 69,
+      "y": 187,
+      "w": 540,
+      "h": 355,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 91,
+      "y": 209,
+      "w": 496,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "CÙNG KẾT NỐI: ĐƯỢC",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 91,
+      "y": 262,
+      "w": 496,
+      "h": 263,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Client mở TCP ra cloud. TCP full duplex; server gửi dữ liệu về qua socket ấy. NAT/firewall còn state.",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 670,
+      "y": 187,
+      "w": 540,
+      "h": 355,
+      "fill": "#FFF3DD"
+    },
+    {
+      "type": "text",
+      "x": 692,
+      "y": 209,
+      "w": 496,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "KẾT NỐI MỚI: CẦN ĐƯỜNG VÀO",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#D8912E",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 692,
+      "y": 262,
+      "w": 496,
+      "h": 263,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Cần service listen, route, mapping/port forwarding và firewall cho phép. Port nguồn cũ không tự lắng nghe.",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 94,
+      "y": 592,
+      "w": 1070,
+      "h": 51,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Vì vậy biết IP public của client chưa đủ để server mở một TCP connection mới.",
+              "sizePt": 21,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

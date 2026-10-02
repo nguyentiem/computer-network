@@ -1,0 +1,166 @@
+{
+  "title": "IP và subnet: trực tiếp hay gateway?",
+  "type": "content",
+  "layout": "hero_big_number",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 3",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IP và subnet: trực tiếp hay gateway?",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "15",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 70,
+      "y": 174,
+      "w": 1127,
+      "h": 338,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 103,
+      "y": 207,
+      "w": 608,
+      "h": 76,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "192.168.1.10 /24",
+              "sizePt": 42,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 107,
+      "y": 302,
+      "w": 1030,
+      "h": 55,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "AND 255.255.255.0  →  192.168.1.0",
+              "sizePt": 26,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 107,
+      "y": 383,
+      "w": 1030,
+      "h": 55,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "198.51.100.20   →  198.51.100.0",
+              "sizePt": 26,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 72,
+      "y": 548,
+      "w": 1124,
+      "h": 76,
+      "fill": "#FFF3DD",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "Khác subnet  →  dùng route mặc định qua gateway 192.168.1.1",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

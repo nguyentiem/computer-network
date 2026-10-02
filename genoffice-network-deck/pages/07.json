@@ -1,0 +1,196 @@
+{
+  "title": "Interface thật: Socket API",
+  "type": "content",
+  "layout": "left_text_right_image",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "INTERFACE",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Interface thật: Socket API",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "07",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 65,
+      "y": 164,
+      "w": 630,
+      "h": 442,
+      "fill": "#102333"
+    },
+    {
+      "type": "text",
+      "x": 94,
+      "y": 213,
+      "w": 575,
+      "h": 318,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "fd = socket(AF_INET, SOCK_STREAM, 0);\nconnect(fd, server_ip:443);\nsend(fd, data, len, 0);\nrecv(fd, buf, len, 0);",
+              "sizePt": 22,
+              "bold": false,
+              "color": "#FFFFFF",
+              "font": "Courier New"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 755,
+      "y": 185,
+      "w": 430,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ỨNG DỤNG GỌI",
+              "sizePt": 17,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 748,
+      "y": 244,
+      "w": 460,
+      "h": 95,
+      "fill": "#E8F5F3",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "Socket API",
+              "sizePt": 25,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 755,
+      "y": 370,
+      "w": 435,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "HỆ ĐIỀU HÀNH CHỌN",
+              "sizePt": 17,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 748,
+      "y": 427,
+      "w": 460,
+      "h": 121,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 773,
+      "y": 446,
+      "w": 420,
+      "h": 82,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IP nguồn  ·  port nguồn tạm thời\nroute  ·  giao diện mạng",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

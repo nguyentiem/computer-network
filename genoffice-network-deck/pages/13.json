@@ -1,0 +1,236 @@
+{
+  "title": "Wi-Fi là một liên kết khác",
+  "type": "content",
+  "layout": "two_column_comparison",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 1–2",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Wi-Fi là một liên kết khác",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "13",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 68,
+      "y": 170,
+      "w": 548,
+      "h": 436,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 196,
+      "w": 500,
+      "h": 44,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Wi-Fi 802.11",
+              "sizePt": 25,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 265,
+      "w": 492,
+      "h": 60,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "scan → authenticate → associate",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 385,
+      "w": 489,
+      "h": 80,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "CSMA/CA · L2 ACK · WPA2/WPA3",
+              "sizePt": 20,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 663,
+      "y": 170,
+      "w": 548,
+      "h": 436,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 690,
+      "y": 196,
+      "w": 480,
+      "h": 44,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Ethernet qua switch",
+              "sizePt": 25,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 690,
+      "y": 265,
+      "w": 477,
+      "h": 60,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "frame MAC đích/nguồn · FCS",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 690,
+      "y": 385,
+      "w": 469,
+      "h": 98,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Full duplex phổ biến; không dùng CSMA/CD trong mạng switch hiện đại.",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 92,
+      "y": 629,
+      "w": 1090,
+      "h": 36,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Wi-Fi 4/5/6/7 = 802.11n/ac/ax/be. Tốc độ PHY ≠ throughput ứng dụng.",
+              "sizePt": 18,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

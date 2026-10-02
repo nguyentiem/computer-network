@@ -1,0 +1,301 @@
+{
+  "title": "Ethernet: từ MCU tới dây",
+  "type": "content",
+  "layout": "timeline_horizontal",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 1–2",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Ethernet: từ MCU tới dây",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "12",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 66,
+      "y": 206,
+      "w": 183,
+      "h": 154,
+      "fill": "#E8F5F3",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "APP / lwIP",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 263,
+      "y": 282,
+      "w": 51,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 297,
+      "y": 206,
+      "w": 150,
+      "h": 154,
+      "fill": "#F4F8F9",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "MAC",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 461,
+      "y": 282,
+      "w": 51,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 527,
+      "y": 206,
+      "w": 150,
+      "h": 154,
+      "fill": "#E8F5F3",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "PHY",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 691,
+      "y": 282,
+      "w": 51,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 756,
+      "y": 206,
+      "w": 150,
+      "h": 154,
+      "fill": "#F4F8F9",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "CÁP",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 920,
+      "y": 282,
+      "w": 51,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 985,
+      "y": 206,
+      "w": 209,
+      "h": 154,
+      "fill": "#E8F5F3",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "SWITCH",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 290,
+      "y": 412,
+      "w": 547,
+      "h": 62,
+      "fill": "#FFF3DD",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "RMII / RGMII: dữ liệu MAC↔PHY",
+              "sizePt": 18,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 420,
+      "y": 495,
+      "w": 332,
+      "h": 62,
+      "fill": "#F4F8F9",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "MDIO: cấu hình PHY",
+              "sizePt": 18,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 100,
+      "y": 601,
+      "w": 1075,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "10/100/1000BASE-T  ·  100/1000BASE-T1  ·  10BASE-T1L",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

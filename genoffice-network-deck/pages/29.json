@@ -1,0 +1,212 @@
+{
+  "title": "Debug mạng theo tầng",
+  "type": "closing",
+  "layout": "closing_cta",
+  "background": "#102333",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TỔNG KẾT",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#21B6A8",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Debug mạng theo tầng",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "29",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 70,
+      "y": 164,
+      "w": 630,
+      "h": 45,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Một phép thử ở mỗi tầng",
+              "sizePt": 26,
+              "bold": true,
+              "color": "#21B6A8",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 229,
+      "w": 1125,
+      "h": 79,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 320,
+      "w": 1125,
+      "h": 79,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 411,
+      "w": 1125,
+      "h": 79,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 502,
+      "w": 1125,
+      "h": 79,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 247,
+      "w": 1000,
+      "h": 45,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "1  Link: NIC, Wi-Fi, MAC, ARP",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 338,
+      "w": 1000,
+      "h": 45,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "2  IP: địa chỉ, subnet, route, TTL",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 429,
+      "w": 1000,
+      "h": 45,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "3  Transport: port, TCP/UDP, firewall/NAT",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 95,
+      "y": 520,
+      "w": 1000,
+      "h": 45,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "4  Ứng dụng: DNS, TLS, HTTP/MQTT",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

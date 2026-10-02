@@ -1,0 +1,692 @@
+{
+  "title": "Bốn trường đi qua NAT",
+  "type": "data",
+  "layout": "chart_with_insight",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 3",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Bốn trường đi qua NAT",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "18",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 70,
+      "y": 181,
+      "w": 146,
+      "h": 75,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 83,
+      "y": 202,
+      "w": 125,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Điểm",
+              "sizePt": 16,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 220,
+      "y": 181,
+      "w": 226,
+      "h": 75,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 233,
+      "y": 202,
+      "w": 205,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "MAC đích",
+              "sizePt": 16,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 450,
+      "y": 181,
+      "w": 311,
+      "h": 75,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 463,
+      "y": 202,
+      "w": 290,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IP nguồn:port",
+              "sizePt": 16,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 765,
+      "y": 181,
+      "w": 303,
+      "h": 75,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 778,
+      "y": 202,
+      "w": 282,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IP đích:port",
+              "sizePt": 16,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 1072,
+      "y": 181,
+      "w": 90,
+      "h": 75,
+      "fill": "#1D3948"
+    },
+    {
+      "type": "text",
+      "x": 1085,
+      "y": 202,
+      "w": 69,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TTL",
+              "sizePt": 16,
+              "bold": true,
+              "color": "#FFFFFF",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 70,
+      "y": 266,
+      "w": 146,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 294,
+      "w": 132,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "LAN A",
+              "sizePt": 17,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 220,
+      "y": 266,
+      "w": 226,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 230,
+      "y": 294,
+      "w": 212,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "gateway",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 450,
+      "y": 266,
+      "w": 311,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 460,
+      "y": 294,
+      "w": 297,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "192.168.1.10:51514",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 765,
+      "y": 266,
+      "w": 303,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 775,
+      "y": 294,
+      "w": 289,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "198.51.100.20:443",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 1072,
+      "y": 266,
+      "w": 90,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 1082,
+      "y": 294,
+      "w": 76,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "64",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 70,
+      "y": 371,
+      "w": 146,
+      "h": 94,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 399,
+      "w": 132,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "sau NAT",
+              "sizePt": 17,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 220,
+      "y": 371,
+      "w": 226,
+      "h": 94,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 230,
+      "y": 399,
+      "w": 212,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "next hop",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 450,
+      "y": 371,
+      "w": 311,
+      "h": 94,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 460,
+      "y": 399,
+      "w": 297,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "203.0.113.10:62001",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#D8912E",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 765,
+      "y": 371,
+      "w": 303,
+      "h": 94,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 775,
+      "y": 399,
+      "w": 289,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "198.51.100.20:443",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 1072,
+      "y": 371,
+      "w": 90,
+      "h": 94,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 1082,
+      "y": 399,
+      "w": 76,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "63",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 70,
+      "y": 476,
+      "w": 146,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 504,
+      "w": 132,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "gần B",
+              "sizePt": 17,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 220,
+      "y": 476,
+      "w": 226,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 230,
+      "y": 504,
+      "w": 212,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "server B",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 450,
+      "y": 476,
+      "w": 311,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 460,
+      "y": 504,
+      "w": 297,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "203.0.113.10:62001",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#D8912E",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 765,
+      "y": 476,
+      "w": 303,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 775,
+      "y": 504,
+      "w": 289,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "198.51.100.20:443",
+              "sizePt": 15,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "rect",
+      "x": 1072,
+      "y": 476,
+      "w": 90,
+      "h": 94,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 1082,
+      "y": 504,
+      "w": 76,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "<63",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 609,
+      "w": 1092,
+      "h": 49,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "MAC đổi theo link · IP/port nguồn đổi ở NAT · TTL giảm tại router",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

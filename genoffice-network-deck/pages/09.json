@@ -1,0 +1,224 @@
+{
+  "title": "Encapsulation: header lồng nhau",
+  "type": "content",
+  "layout": "hero_big_number",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "INTERFACE",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Encapsulation: header lồng nhau",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "09",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 155,
+      "y": 190,
+      "w": 970,
+      "h": 393,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 180,
+      "y": 209,
+      "w": 920,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ETHERNET FRAME",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 212,
+      "y": 243,
+      "w": 855,
+      "h": 289,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 237,
+      "y": 262,
+      "w": 805,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IP PACKET",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 270,
+      "y": 296,
+      "w": 739,
+      "h": 185,
+      "fill": "#FFF3DD"
+    },
+    {
+      "type": "text",
+      "x": 295,
+      "y": 315,
+      "w": 689,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TCP SEGMENT",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 298,
+      "y": 390,
+      "w": 683,
+      "h": 58,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "port  |  seq/ACK  |  data",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 604,
+      "w": 500,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Ứng dụng đưa byte vào TCP",
+              "sizePt": 21,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 660,
+      "y": 604,
+      "w": 520,
+      "h": 43,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Bên nhận bóc theo chiều ngược lại",
+              "sizePt": 21,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

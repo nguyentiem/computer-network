@@ -1,0 +1,209 @@
+{
+  "topic": "Mạng máy tính và 7 tầng OSI cho lập trình viên",
+  "core_hook": "Một lệnh send() có thể đi qua 7 lớp, nhiều router và hai tầng NAT trước khi tới server.",
+  "pages": [
+    {
+      "title": "Mạng máy tính dưới lớp socket",
+      "type": "cover",
+      "layout": "cover_typography_hero",
+      "brief": "Mở bài: từ một lệnh send() đến bit trên dây, router và server; minh họa gói tin lồng nhau.",
+      "image_queries": []
+    },
+    {
+      "title": "Một request, nhiều quyết định",
+      "type": "content",
+      "layout": "hero_big_number",
+      "brief": "Mục tiêu và lộ trình 110 phút: 7 tầng, địa chỉ MAC/IP/port và đường đi hai chiều.",
+      "image_queries": []
+    },
+    {
+      "title": "Ai làm việc gì trên đường truyền?",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "Host, switch/AP, router/gateway, modem/ONT và ISP trong một đường mạng gia đình.",
+      "image_queries": []
+    },
+    {
+      "title": "OSI là bản đồ; TCP/IP là stack",
+      "type": "data",
+      "layout": "two_by_two_grid",
+      "brief": "Bảy tầng OSI, PDU từng tầng và phép đối chiếu bốn nhóm TCP/IP; ghi chú TLS/ARP/QUIC không gọn một tầng.",
+      "image_queries": []
+    },
+    {
+      "title": "Tầng 7: ứng dụng nói chuyện bằng giao thức",
+      "type": "content",
+      "layout": "three_column_cards",
+      "brief": "HTTP, DNS, DHCP, MQTT và SSH: mỗi cái trả lời một nhu cầu ứng dụng.",
+      "image_queries": []
+    },
+    {
+      "title": "Tầng 5–6: phiên và biểu diễn dữ liệu",
+      "type": "content",
+      "layout": "two_column_comparison",
+      "brief": "UTF-8/JSON/TLS và session ID/cookie; giải thích vị trí thực tế của TLS.",
+      "image_queries": []
+    },
+    {
+      "title": "Interface thật: Socket API",
+      "type": "content",
+      "layout": "left_text_right_image",
+      "brief": "socket/connect/send/recv, IP và port đích; OS chọn route, IP nguồn và port nguồn.",
+      "image_queries": []
+    },
+    {
+      "title": "Chiều nhận: tới đúng socket",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "EtherType chọn IP; IP Protocol chọn TCP/UDP; destination port và 5-tuple chọn socket.",
+      "image_queries": []
+    },
+    {
+      "title": "Encapsulation: header lồng nhau",
+      "type": "content",
+      "layout": "hero_big_number",
+      "brief": "Data → TCP segment → IP packet → Ethernet frame → bit, và chiều nhận giải đóng gói.",
+      "image_queries": []
+    },
+    {
+      "title": "Nhìn header, thấy quyết định",
+      "type": "data",
+      "layout": "chart_with_insight",
+      "brief": "Cấu trúc tối thiểu Ethernet 14B, IPv4 20B, TCP 20B, UDP 8B; các trường quan trọng.",
+      "image_queries": []
+    },
+    {
+      "title": "Data structure sống trong stack",
+      "type": "content",
+      "layout": "three_column_cards",
+      "brief": "Packet buffer, socket/PCB, FIB, neighbor table, switch FDB, NAT conntrack, NIC ring.",
+      "image_queries": []
+    },
+    {
+      "title": "Ethernet: từ MCU tới dây",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "MAC, RMII/RGMII, MDIO, PHY, transceiver, switch; chuẩn BASE-T và T1.",
+      "image_queries": []
+    },
+    {
+      "title": "Wi-Fi là một liên kết khác",
+      "type": "content",
+      "layout": "two_column_comparison",
+      "brief": "Scan/authenticate/associate, CSMA/CA, WPA2/3, 802.11n/ac/ax/be; khác Ethernet.",
+      "image_queries": []
+    },
+    {
+      "title": "Embedded không chỉ có Ethernet",
+      "type": "data",
+      "layout": "two_by_two_grid",
+      "brief": "BLE, 802.15.4/Thread, cellular, CAN, RS-485 và điểm có/không có IP.",
+      "image_queries": []
+    },
+    {
+      "title": "IP và subnet: trực tiếp hay gateway?",
+      "type": "content",
+      "layout": "hero_big_number",
+      "brief": "Ví dụ 192.168.1.10/24 tới 198.51.100.20; AND mask và route mặc định.",
+      "image_queries": []
+    },
+    {
+      "title": "ARP tìm MAC của chặng kế",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "A gửi B khác mạng: ARP gateway, MAC đích là gateway, IP đích vẫn là B.",
+      "image_queries": []
+    },
+    {
+      "title": "Router thay cái gì?",
+      "type": "content",
+      "layout": "three_column_cards",
+      "brief": "Bóc frame L2, longest prefix match, giảm TTL, cập nhật checksum, đóng frame mới.",
+      "image_queries": []
+    },
+    {
+      "title": "Bốn trường đi qua NAT",
+      "type": "data",
+      "layout": "chart_with_insight",
+      "brief": "Bảng MAC, IP nguồn/đích, port và TTL trước và sau NAT với địa chỉ ví dụ.",
+      "image_queries": []
+    },
+    {
+      "title": "MTU: nút thắt của cả đường",
+      "type": "content",
+      "layout": "two_column_comparison",
+      "brief": "IPv4 DF/ICMP fragmentation needed; IPv6 Packet Too Big, router không phân mảnh.",
+      "image_queries": []
+    },
+    {
+      "title": "TCP, UDP, QUIC phục vụ ba nhu cầu",
+      "type": "data",
+      "layout": "two_by_two_grid",
+      "brief": "So sánh byte stream, datagram, độ tin cậy, handshake và HTTP/3 trên QUIC/UDP.",
+      "image_queries": []
+    },
+    {
+      "title": "TCP handshake và 5-tuple",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "SYN, SYN/ACK, ACK; sequence/ACK và listening vs connected socket.",
+      "image_queries": []
+    },
+    {
+      "title": "Gõ https://example.com rồi Enter",
+      "type": "content",
+      "layout": "left_text_right_image",
+      "brief": "DNS/cache → route/ARP → TCP → TLS → HTTP; biến thể HTTP/3 dùng QUIC.",
+      "image_queries": []
+    },
+    {
+      "title": "NAT: server nhìn thấy ai?",
+      "type": "content",
+      "layout": "hero_big_number",
+      "brief": "PAT ánh xạ 192.168.1.10:51514 sang 203.0.113.10:62001 khi gửi tới server.",
+      "image_queries": []
+    },
+    {
+      "title": "CGNAT đặt thêm một lớp dịch",
+      "type": "content",
+      "layout": "timeline_horizontal",
+      "brief": "LAN IP, WAN 100.64.0.0/10, public IP của ISP; port forwarding ở nhà chưa đủ.",
+      "image_queries": []
+    },
+    {
+      "title": "Trả lời trên kết nối cũ ≠ mở kết nối mới",
+      "type": "content",
+      "layout": "two_column_comparison",
+      "brief": "TCP full duplex với state NAT; inbound mới cần listen, mapping/rule, firewall và route.",
+      "image_queries": []
+    },
+    {
+      "title": "Cloud điều khiển thiết bị sau NAT",
+      "type": "content",
+      "layout": "three_column_cards",
+      "brief": "MQTT/WebSocket giữ kết nối; port forwarding/IPv6; tunnel/VPN/ICE/TURN, điều kiện mỗi cách.",
+      "image_queries": []
+    },
+    {
+      "title": "Demo: quan sát bằng lệnh và Wireshark",
+      "type": "data",
+      "layout": "two_by_two_grid",
+      "brief": "ip addr/ipconfig, route, ARP, traceroute, curl IP public, capture header Ethernet/IP/TCP.",
+      "image_queries": []
+    },
+    {
+      "title": "Thử tự giải thích gói tin",
+      "type": "content",
+      "layout": "hero_big_number",
+      "brief": "Bốn câu hỏi: MAC gateway, trường router đổi, NAT server thấy, thiết kế IoT sau CGNAT.",
+      "image_queries": []
+    },
+    {
+      "title": "Debug mạng theo tầng",
+      "type": "closing",
+      "layout": "closing_cta",
+      "brief": "Kết luận: link → IP/route → port/socket → TLS/app, kiểm tra từng lớp bằng chứng cứ.",
+      "image_queries": []
+    }
+  ]
+}

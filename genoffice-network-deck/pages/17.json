@@ -1,0 +1,296 @@
+{
+  "title": "Router thay cái gì?",
+  "type": "content",
+  "layout": "three_column_cards",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 3",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Router thay cái gì?",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "17",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 165,
+      "w": 537,
+      "h": 195,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 89,
+      "y": 187,
+      "w": 493,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "1  Bóc L2",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 89,
+      "y": 240,
+      "w": 493,
+      "h": 103,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Lấy IP packet từ frame đến",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 642,
+      "y": 165,
+      "w": 537,
+      "h": 195,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 664,
+      "y": 187,
+      "w": 493,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "2  Tra FIB",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 664,
+      "y": 240,
+      "w": 493,
+      "h": 103,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Longest prefix match trên IP đích",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 390,
+      "w": 537,
+      "h": 195,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 89,
+      "y": 412,
+      "w": 493,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "3  Giảm TTL",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 89,
+      "y": 465,
+      "w": 493,
+      "h": 103,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Cập nhật IPv4 header checksum",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 642,
+      "y": 390,
+      "w": 537,
+      "h": 195,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 664,
+      "y": 412,
+      "w": 493,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "4  Đóng L2",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 664,
+      "y": 465,
+      "w": 493,
+      "h": 103,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "MAC mới cho chặng kế",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 85,
+      "y": 625,
+      "w": 1100,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Router không đổi IP đích chỉ vì định tuyến; NAT hoặc tunnel có thể đổi thêm trường.",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

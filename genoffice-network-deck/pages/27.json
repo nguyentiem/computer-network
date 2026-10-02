@@ -1,0 +1,275 @@
+{
+  "title": "Demo: quan sát bằng lệnh và Wireshark",
+  "type": "data",
+  "layout": "two_by_two_grid",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "THỰC HÀNH",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Demo: quan sát bằng lệnh và Wireshark",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "27",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 70,
+      "y": 169,
+      "w": 536,
+      "h": 202,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 92,
+      "y": 191,
+      "w": 492,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "1  Cấu hình",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 92,
+      "y": 244,
+      "w": 492,
+      "h": 110,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ip addr / ipconfig\nip route / route print",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 644,
+      "y": 169,
+      "w": 536,
+      "h": 202,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 666,
+      "y": 191,
+      "w": 492,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "2  Chặng kế",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 666,
+      "y": 244,
+      "w": 492,
+      "h": 110,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ip neigh / arp -a\ntraceroute / tracert",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 70,
+      "y": 403,
+      "w": 536,
+      "h": 202,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 92,
+      "y": 425,
+      "w": 492,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "3  IP ngoài",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 92,
+      "y": 478,
+      "w": 492,
+      "h": 110,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "curl -4 ifconfig.me\nso với WAN IP router",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 644,
+      "y": 403,
+      "w": 536,
+      "h": 202,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 666,
+      "y": 425,
+      "w": 492,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "4  Header",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 666,
+      "y": 478,
+      "w": 492,
+      "h": 110,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Wireshark: Ethernet → IPv4\n→ TCP → HTTP",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

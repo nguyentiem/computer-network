@@ -1,0 +1,395 @@
+{
+  "title": "Ai làm việc gì trên đường truyền?",
+  "type": "content",
+  "layout": "timeline_horizontal",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TỔNG QUAN",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Ai làm việc gì trên đường truyền?",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "03",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 65,
+      "y": 206,
+      "w": 180,
+      "h": 174,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 79,
+      "y": 235,
+      "w": 152,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "HOST",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 301,
+      "w": 150,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "App + NIC",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 254,
+      "y": 292,
+      "w": 30,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 292,
+      "y": 206,
+      "w": 180,
+      "h": 174,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 306,
+      "y": 235,
+      "w": 152,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "SWITCH / AP",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 307,
+      "y": 301,
+      "w": 150,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "LAN",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 481,
+      "y": 292,
+      "w": 30,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 551,
+      "y": 206,
+      "w": 180,
+      "h": 174,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 565,
+      "y": 235,
+      "w": 152,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "ROUTER",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 566,
+      "y": 301,
+      "w": 150,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "IP + NAT",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 740,
+      "y": 292,
+      "w": 30,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 806,
+      "y": 206,
+      "w": 194,
+      "h": 174,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 820,
+      "y": 235,
+      "w": 166,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "MODEM / ONT",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 821,
+      "y": 301,
+      "w": 164,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "Tín hiệu",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 1009,
+      "y": 292,
+      "w": 30,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 1055,
+      "y": 206,
+      "w": 180,
+      "h": 174,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 1069,
+      "y": 235,
+      "w": 152,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "ISP",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1070,
+      "y": 301,
+      "w": 150,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "WAN",
+              "sizePt": 17,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 478,
+      "w": 1120,
+      "h": 72,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Một hộp Wi-Fi gia đình có thể gộp router, switch, AP, NAT, firewall và DHCP.",
+              "sizePt": 22,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

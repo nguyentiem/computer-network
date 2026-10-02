@@ -1,0 +1,416 @@
+{
+  "title": "Chiều nhận: tới đúng socket",
+  "type": "content",
+  "layout": "timeline_horizontal",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "INTERFACE",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Chiều nhận: tới đúng socket",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "08",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 67,
+      "y": 199,
+      "w": 250,
+      "h": 257,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 85,
+      "y": 226,
+      "w": 215,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "EtherType",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 85,
+      "y": 286,
+      "w": 215,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "0x0800",
+              "sizePt": 27,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 85,
+      "y": 381,
+      "w": 215,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "IPv4",
+              "sizePt": 18,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 321,
+      "y": 325,
+      "w": 41,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 367,
+      "y": 199,
+      "w": 250,
+      "h": 257,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 385,
+      "y": 226,
+      "w": 215,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Protocol",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 385,
+      "y": 286,
+      "w": 215,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "6",
+              "sizePt": 27,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 385,
+      "y": 381,
+      "w": 215,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TCP",
+              "sizePt": 18,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 621,
+      "y": 325,
+      "w": 41,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 667,
+      "y": 199,
+      "w": 250,
+      "h": 257,
+      "fill": "#E8F5F3"
+    },
+    {
+      "type": "text",
+      "x": 685,
+      "y": 226,
+      "w": 215,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "dst port",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 685,
+      "y": 286,
+      "w": 215,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "443",
+              "sizePt": 27,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 685,
+      "y": 381,
+      "w": 215,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Socket",
+              "sizePt": 18,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 921,
+      "y": 325,
+      "w": 41,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 967,
+      "y": 199,
+      "w": 250,
+      "h": 257,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 985,
+      "y": 226,
+      "w": 215,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "5-tuple",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 985,
+      "y": 286,
+      "w": 215,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "hai IP + hai port",
+              "sizePt": 27,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 985,
+      "y": 381,
+      "w": 215,
+      "h": 42,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Kết nối cụ thể",
+              "sizePt": 18,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 522,
+      "w": 1100,
+      "h": 54,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Port là trường định danh endpoint; Socket API mới là interface lập trình.",
+              "sizePt": 22,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

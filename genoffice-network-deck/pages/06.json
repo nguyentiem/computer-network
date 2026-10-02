@@ -1,0 +1,194 @@
+{
+  "title": "Tầng 5–6: phiên và biểu diễn dữ liệu",
+  "type": "content",
+  "layout": "two_column_comparison",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "OSI 5–7",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Tầng 5–6: phiên và biểu diễn dữ liệu",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "06",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 72,
+      "y": 180,
+      "w": 535,
+      "h": 370,
+      "fill": "#F4F8F9"
+    },
+    {
+      "type": "text",
+      "x": 94,
+      "y": 202,
+      "w": 491,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Tầng 6 — biểu diễn",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 94,
+      "y": 255,
+      "w": 491,
+      "h": 278,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "UTF-8 đổi ký tự thành byte. JSON/CBOR mô tả cấu trúc. TLS bảo vệ byte trên đường truyền.",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 667,
+      "y": 180,
+      "w": 535,
+      "h": 370,
+      "fill": "#FFF3DD"
+    },
+    {
+      "type": "text",
+      "x": 689,
+      "y": 202,
+      "w": 491,
+      "h": 39,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Tầng 5 — phiên",
+              "sizePt": 22,
+              "bold": true,
+              "color": "#D8912E",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 689,
+      "y": 255,
+      "w": 491,
+      "h": 278,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Session ID/cookie giúp ứng dụng nhận lại phiên logic. RPC quản lý lời gọi và phản hồi.",
+              "sizePt": 16,
+              "bold": false,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 85,
+      "y": 584,
+      "w": 1100,
+      "h": 72,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Trong TCP/IP thực tế, nhiều chức năng tầng 5–6 nằm trong ứng dụng hoặc thư viện; TLS không có một vị trí OSI cố định.",
+              "sizePt": 19,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

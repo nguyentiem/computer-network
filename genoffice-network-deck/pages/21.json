@@ -1,0 +1,261 @@
+{
+  "title": "TCP handshake và 5-tuple",
+  "type": "content",
+  "layout": "timeline_horizontal",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TẦNG 4",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TCP handshake và 5-tuple",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "21",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 380,
+      "y": 565,
+      "w": 520,
+      "h": 64,
+      "fill": "#E8F5F3",
+      "paragraphs": [
+        {
+          "align": "center",
+          "runs": [
+            {
+              "text": "5-tuple = TCP + 2 IP + 2 port",
+              "sizePt": 19,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 125,
+      "y": 171,
+      "w": 236,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "CLIENT",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 951,
+      "y": 171,
+      "w": 236,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "SERVER",
+              "sizePt": 23,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "line",
+      "x": 240,
+      "y": 220,
+      "w": 1,
+      "h": 312,
+      "stroke": {
+        "color": "#CDDDE0",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "line",
+      "x": 1037,
+      "y": 220,
+      "w": 1,
+      "h": 312,
+      "stroke": {
+        "color": "#CDDDE0",
+        "widthPt": 2
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 257,
+      "y": 260,
+      "w": 760,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 4
+      }
+    },
+    {
+      "type": "text",
+      "x": 514,
+      "y": 228,
+      "w": 300,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "SYN · seq = x",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 257,
+      "y": 359,
+      "w": 760,
+      "h": 1,
+      "stroke": {
+        "color": "#D8912E",
+        "widthPt": 4
+      },
+      "flipH": true
+    },
+    {
+      "type": "text",
+      "x": 484,
+      "y": 322,
+      "w": 363,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "SYN/ACK · ack = x+1",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "lineArrow",
+      "x": 257,
+      "y": 461,
+      "w": 760,
+      "h": 1,
+      "stroke": {
+        "color": "#087E79",
+        "widthPt": 4
+      }
+    },
+    {
+      "type": "text",
+      "x": 493,
+      "y": 422,
+      "w": 351,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "ACK · ack = y+1",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    null
+  ]
+}

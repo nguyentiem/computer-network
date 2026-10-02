@@ -1,0 +1,350 @@
+{
+  "title": "Một request, nhiều quyết định",
+  "type": "content",
+  "layout": "hero_big_number",
+  "background": "#FFFFFF",
+  "elements": [
+    {
+      "type": "text",
+      "x": 62,
+      "y": 33,
+      "w": 950,
+      "h": 24,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "TỔNG QUAN",
+              "sizePt": 12,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 62,
+      "y": 64,
+      "w": 1120,
+      "h": 73,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Một request, nhiều quyết định",
+              "sizePt": 37,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 1174,
+      "y": 660,
+      "w": 48,
+      "h": 25,
+      "paragraphs": [
+        {
+          "align": "right",
+          "runs": [
+            {
+              "text": "02",
+              "sizePt": 11,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 76,
+      "y": 174,
+      "w": 230,
+      "h": 140,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "7",
+              "sizePt": 79,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 320,
+      "w": 232,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "tầng OSI",
+              "sizePt": 21,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 385,
+      "y": 174,
+      "w": 230,
+      "h": 140,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "4",
+              "sizePt": 79,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 390,
+      "y": 320,
+      "w": 260,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "định danh",
+              "sizePt": 21,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 742,
+      "y": 174,
+      "w": 230,
+      "h": 140,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "1",
+              "sizePt": 79,
+              "bold": true,
+              "color": "#087E79",
+              "font": "Cambria"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 745,
+      "y": 320,
+      "w": 290,
+      "h": 35,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "hành trình",
+              "sizePt": 21,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "line",
+      "x": 88,
+      "y": 475,
+      "w": 1070,
+      "h": 1,
+      "stroke": {
+        "color": "#CDDDE0",
+        "widthPt": 3
+      }
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 86,
+      "y": 456,
+      "w": 27,
+      "h": 27,
+      "fill": "#087E79"
+    },
+    {
+      "type": "text",
+      "x": 74,
+      "y": 505,
+      "w": 225,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "mô hình",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 350,
+      "y": 456,
+      "w": 27,
+      "h": 27,
+      "fill": "#087E79"
+    },
+    {
+      "type": "text",
+      "x": 338,
+      "y": 505,
+      "w": 225,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "interface",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 615,
+      "y": 456,
+      "w": 27,
+      "h": 27,
+      "fill": "#087E79"
+    },
+    {
+      "type": "text",
+      "x": 603,
+      "y": 505,
+      "w": 225,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "gói tin",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "shape",
+      "shape": "roundRect",
+      "x": 880,
+      "y": 456,
+      "w": 27,
+      "h": 27,
+      "fill": "#087E79"
+    },
+    {
+      "type": "text",
+      "x": 868,
+      "y": 505,
+      "w": 225,
+      "h": 40,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "NAT + demo",
+              "sizePt": 20,
+              "bold": true,
+              "color": "#172F3C",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "x": 80,
+      "y": 604,
+      "w": 1060,
+      "h": 38,
+      "paragraphs": [
+        {
+          "align": "left",
+          "runs": [
+            {
+              "text": "Câu hỏi dẫn đường: server thấy địa chỉ nào của client?",
+              "sizePt": 20,
+              "bold": false,
+              "color": "#5F7580",
+              "font": "Arial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
