@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Lab · Từ A ra Internet đến B</title><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/internet-journey.css"><link rel="stylesheet" href="assets/internet-journey-stacks.css"></head>
+<body><header class="topbar"><a href="index.html">← Toàn bộ khóa học</a><span>LAB · 5 TẦNG VÀ NAT</span><a href="packet-lab.html">Lab cùng LAN →</a></header>
+<main class="lesson"><div class="hero"><p class="kicker">Mô phỏng end-to-end</p><h1>Từ máy A qua Internet đến máy B</h1><p class="lead">Bước qua DNS, ARP, switch, router NAT, mạng ISP, Internet và máy B. Tại mỗi node, xem tầng nào được đọc, trường nào đổi, frame nào được đóng lại và phản hồi quay về A ra sao.</p></div>
+<section class="section"><h2>Ví dụ và giả định</h2><div class="table-wrap"><table><thead><tr><th>Thành phần</th><th>Địa chỉ trong ví dụ</th><th>Vai trò</th></tr></thead><tbody>
+<tr><td>Máy A · LAN nhà</td><td><code>192.168.1.10:51514</code><br><code>02:00:00:00:01:10</code></td><td>Gửi thông điệp UDP tới <code>b.example.test:9000</code></td></tr>
+<tr><td>Router nhà</td><td>LAN <code>192.168.1.1</code> · WAN <code>203.0.113.10</code></td><td>DNS forwarder có cache, gateway, NAT/PAT và firewall</td></tr>
+<tr><td>ISP và Internet</td><td>ISP next hop <code>203.0.113.1</code></td><td>Định tuyến qua các mạng trung gian; sơ đồ gộp thành hai router đại diện</td></tr>
+<tr><td>Máy B · server</td><td><code>198.51.100.20:9000</code></td><td>Nhận dữ liệu và gửi phản hồi</td></tr>
+</tbody></table></div><p class="note">Địa chỉ <code>203.0.113.0/24</code> và <code>198.51.100.0/24</code> dành cho tài liệu, không phải server thật. Ví dụ dùng IPv4, Ethernet trên các link được vẽ, UDP để tránh thêm bắt tay TCP, router nhà có IPv4 WAN riêng và DNS forwarder đã lưu bản ghi B. Trên Internet thật có thể có Wi-Fi, modem/ONT, quang, PPPoE, MPLS, IPv6, CGNAT, nhiều router hơn hoặc DNS cache ở nơi khác.</p>
+<h3>Node trung gian đi lên tầng nào?</h3><div class="table-wrap"><table><thead><tr><th>Node</th><th>Mức xử lý của ví dụ</th><th>Có đọc Transport/Application không?</th></tr></thead><tbody>
+<tr><td>A và B</td><td>Đủ 5 tầng: tín hiệu → Ethernet → IP → UDP → ứng dụng</td><td>Có; B giao payload cho ứng dụng ở UDP 9000.</td></tr>
+<tr><td>Switch LAN</td><td>Tầng 1–2: nhận tín hiệu, đọc MAC, học và chuyển frame</td><td>Không. IP, UDP và dữ liệu bên trong được mang nguyên.</td></tr>
+<tr><td>Router ISP/Internet</td><td>Nhận link ở tầng 1–2, tháo frame, đọc/đổi TTL ở tầng 3, đóng frame link mới</td><td>Thông thường không cần đọc port UDP/TCP hay payload để định tuyến trong mô hình này.</td></tr>
+<tr><td>Router nhà khi NAT</td><td>Tầng 1–3 và <em>header</em> tầng 4: đổi IP nguồn/đích, port, TTL, checksum rồi đóng frame mới</td><td>Đọc/sửa port UDP; không giao dữ liệu ứng dụng cho app.</td></tr>
+<tr><td>DNS forwarder trên router nhà</td><td>Đây là một dịch vụ chạy trên router nên xử lý câu hỏi DNS lên tới tầng 5</td><td>Có, nhưng chỉ cho gói gửi đến chính dịch vụ DNS đó.</td></tr>
+</tbody></table></div><p>Modem/ONT nếu có nằm giữa router nhà và ISP làm việc với đường truy nhập và framing của công nghệ đó; khi chỉ bridge lưu lượng, nó không định tuyến IP hay làm NAT. Các thiết bị có firewall, proxy, CGNAT hoặc kiểm tra sâu có thể đọc thêm tầng; bảng trên mô tả đúng <em>vai trò tại từng bước của ví dụ</em>.</p>
+<details><summary>Nếu DNS forwarder chưa có kết quả trong cache thì sao?</summary><p>Router gửi một DNS query riêng tới resolver upstream. Resolver có thể dùng cache của nó; nếu cũng chưa có, nó hỏi hệ thống DNS có thẩm quyền qua các bước cần thiết rồi trả IP. Router chuyển câu trả lời về A, A mới tiếp tục gửi dữ liệu ứng dụng tới B. Việc hỏi DNS upstream có frame, route và có thể có NAT riêng; nó không phải chính frame <code>HELLO B</code> đang được theo dõi bên dưới.</p></details></section>
+<section class="section" id="mo-phong"><h2>Chạy hành trình</h2><p>Nhấn <strong>Bước tiếp</strong> để theo dõi. Đường tô sáng chỉ link đang mang frame; bảng địa chỉ ghi đúng header tại bước đó. Bạn cũng có thể bấm một node để xem vai trò thường trực của nó.</p>
+<div class="journey-controls"><button type="button" id="journey-prev">← Bước trước</button><button type="button" id="journey-next">Bước tiếp →</button><button type="button" id="journey-play" aria-pressed="false">▶ Tự chạy</button><button type="button" id="journey-reset">Làm lại</button><span id="journey-count" aria-live="polite"></span></div>
+<div class="journey-map-scroll"><div class="journey-map" id="journey-map" aria-label="Máy A qua switch, router NAT, ISP, Internet đến máy B">
+  <button type="button" class="journey-node" data-node="a"><strong>Máy A</strong><small>192.168.1.10<br>LAN riêng</small></button><div class="journey-link" data-link="a-sw"><i></i></div>
+  <button type="button" class="journey-node" data-node="sw"><strong>Switch</strong><small>Chuyển frame<br>theo MAC</small></button><div class="journey-link" data-link="sw-home"><i></i></div>
+  <button type="button" class="journey-node home" data-node="home"><strong>Router nhà</strong><small>DNS · NAT<br>203.0.113.10</small></button><div class="journey-link" data-link="home-isp"><i></i></div>
+  <button type="button" class="journey-node" data-node="isp"><strong>ISP</strong><small>Router biên<br>203.0.113.1</small></button><div class="journey-link" data-link="isp-net"><i></i></div>
+  <button type="button" class="journey-node" data-node="net"><strong>Internet</strong><small>Router trung gian<br>đại diện</small></button><div class="journey-link" data-link="net-b"><i></i></div>
+  <button type="button" class="journey-node destination" data-node="b"><strong>Máy B</strong><small>198.51.100.20<br>UDP 9000</small></button>
+</div><div class="journey-stack-board" id="journey-stack-board" aria-label="Mỗi node có đủ năm tầng; cột được tô màu cho biết bản tin đi lên tới tầng nào tại bước hiện tại"></div></div>
+<div class="journey-caption" id="journey-caption" aria-live="polite"></div>
+<p class="journey-stack-summary" id="journey-stack-summary" aria-live="polite"></p>
+<p class="journey-stack-note">Mỗi cột luôn có đủ 5 tầng. <strong>Ô sáng</strong> là các tầng node đang xử lý ở bước này; ô phía trên còn mờ vẫn nằm trong dữ liệu được chuyển tiếp, nhưng node không mở để xử lý. Mức sáng thay đổi theo vai trò của bản tin: router nhà chỉ lên tầng 2 với ARP, tầng 4 khi NAT, tầng 5 khi chính nó trả lời DNS.</p>
+<div class="journey-inspector" id="journey-inspector" aria-live="polite"></div>
+<div class="journey-grid"><div class="journey-panel"><h3>5 tầng tại node đang xử lý</h3><div id="journey-layers" class="journey-layers"></div><p class="journey-foot">Tầng vật lý truyền tín hiệu; Ethernet ở tầng liên kết. Switch thường chỉ quyết định theo tầng 2; router xử lý tới IP, và NAT còn đọc/sửa IP:port tầng 4.</p></div>
+<div class="journey-panel"><h3>Header của bản tin trên chặng này</h3><div id="journey-headers" class="journey-headers"></div><h3>Bảng NAT trên router nhà</h3><div id="journey-nat" class="journey-nat"></div></div></div>
+</section>
+<section class="section"><h2>Điều cần phân biệt</h2><div class="table-wrap"><table><thead><tr><th>Thông tin</th><th>Điều xảy ra trong ví dụ</th></tr></thead><tbody>
+<tr><td>Tìm B</td><td>DNS đổi tên <code>b.example.test</code> thành <code>198.51.100.20</code>. A so subnet để chọn gateway, rồi ARP lấy <em>MAC gateway</em>; A không ARP MAC của B ở Internet.</td></tr>
+<tr><td>MAC</td><td>Giữ nguyên qua switch trên cùng LAN. Mỗi router kết thúc frame cũ và tạo frame mới với MAC của link kế; MAC của A không đi xuyên Internet tới B.</td></tr>
+<tr><td>IP và port</td><td>Router nhà đổi <code>192.168.1.10:51514</code> thành <code>203.0.113.10:62001</code>. Các router ISP/Internet không đổi IP:port trong ví dụ; B chỉ thấy địa chỉ sau NAT.</td></tr>
+<tr><td>TTL và checksum</td><td>Mỗi router IPv4 giảm TTL, cập nhật IPv4 header checksum; NAT còn cập nhật checksum liên quan khi đổi IP/port. Switch không giảm TTL.</td></tr>
+<tr><td>Chiều về</td><td>B trả tới <code>203.0.113.10:62001</code>. Router nhà tra bảng NAT, đổi đích lại thành <code>192.168.1.10:51514</code>, rồi gửi trong LAN.</td></tr>
+</tbody></table></div><p class="note">DNS, ARP và bản tin ứng dụng là các cuộc trao đổi khác nhau. DNS không trả MAC; ARP không tìm IP của server ngoài LAN; NAT không tự tìm đường. Mỗi chức năng giải một phần của hành trình.</p></section>
+</main><script src="assets/lesson.js"></script><script src="assets/internet-journey.js"></script></body></html>

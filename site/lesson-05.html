@@ -1,0 +1,83 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Buổi 5 · VLAN, STP và Wi-Fi</title><link rel="stylesheet" href="assets/style.css"></head><body><header class="topbar"><a href="lesson-04.html">← Buổi 4</a><a href="index.html">Mục lục</a><a href="lesson-06.html">Buổi 6 →</a></header><main class="lesson"><div class="hero"><p class="kicker">Buổi 05 / 25 · Phần B</p><h1>VLAN, STP và Wi-Fi</h1><p class="lead">Một switch có thể chia thành nhiều mạng logic; một vòng cáp có thể làm sập LAN; Wi-Fi lại phải chia lượt phát trên sóng radio. Bài này kết nối ba vấn đề đó.</p></div>
+<section class="section" id="vlan"><h2>1. VLAN: chia LAN theo logic</h2>
+  <div class="concept"><h3>VLAN giải quyết vấn đề gì?</h3>
+    <p><strong>Trước khi có:</strong> Các cổng trong cùng một LAN tầng 2 thường chia sẻ broadcast domain; broadcast và các frame flood có thể tới mọi máy, trong khi nhân viên và khách cần tách nhau.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> Virtual LAN (VLAN) là một miền tầng 2 logic trên switch/bridge. VLAN 10 và VLAN 20 có bảng chuyển tiếp và phạm vi flood riêng, dù dùng chung thiết bị vật lý.</p>
+    <p><strong>Cách giải quyết:</strong> Switch gán mỗi frame vào một VLAN theo cổng vào hoặc tag; nó chỉ học MAC và chuyển/flood frame trong VLAN đó. Các switch nối với nhau có thể mang nhiều VLAN trên một link trunk.</p>
+    <p><strong>Sau khi có:</strong> Có thể chia mạng nhân viên và khách mà không cần một switch vật lý riêng cho từng nhóm; broadcast của VLAN này không tự lan sang VLAN kia.</p>
+    <p><strong>Giới hạn:</strong> VLAN không tự cấp IP, không mã hóa dữ liệu và không tự thực thi chính sách truy cập. Muốn trao đổi giữa hai VLAN cần router hoặc switch Layer 3; ACL/firewall mới quyết định lưu lượng nào được phép.</p>
+  </div>
+  <div class="concept"><h3>Access port, trunk port và tag 802.1Q</h3>
+    <p><strong>Trước khi có:</strong> Nếu một dây giữa hai switch phải chở nhiều VLAN, bên nhận cần biết frame nào thuộc VLAN nào; frame Ethernet thông thường không mang thông tin đó.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> <em>Access port</em> thường nối host và thuộc một VLAN, host gửi/nhận frame không tag. <em>Trunk port</em> thường nối switch/router/hypervisor và mang nhiều VLAN. Tag IEEE 802.1Q nằm trong Ethernet frame trên link trunk.</p>
+    <p><strong>Cách giải quyết:</strong> Switch thêm tag 4 byte sau MAC nguồn khi đưa frame lên trunk; đầu bên kia đọc VLAN ID (VID) rồi đặt frame vào đúng VLAN. Tag gồm TPID (thường <code>0x8100</code>), PCP 3 bit chỉ mức ưu tiên, DEI 1 bit cho biết khả năng loại bỏ khi tắc, và VID 12 bit. VID 0 dùng cho frame ưu tiên không gán VLAN cụ thể; 4095 dành riêng; VLAN cấu hình thông thường là 1–4094.</p>
+    <p><strong>Sau khi có:</strong> Một đường trunk chở được nhiều VLAN mà vẫn giữ tách biệt các broadcast domain.</p>
+    <p><strong>Giới hạn:</strong> Tag làm frame lớn thêm 4 byte; thiết bị trên đường cần hỗ trợ kích thước đó. <em>Native VLAN</em> theo cấu hình có thể đi không tag trên trunk; hai đầu cấu hình lệch sẽ phân loại nhầm lưu lượng. Chỉ cho phép những VLAN cần thiết trên trunk.</p>
+  </div>
+  <div class="visual"><div class="flow"><span class="flow-step">PC nhân viên · VLAN 10</span><span class="flow-step">Access 10 · không tag</span><span class="flow-step">Switch A</span><span class="flow-step">Trunk · tag VID 10</span><span class="flow-step">Switch B</span></div><p>PC ở VLAN 10 gửi tới VLAN 20 sẽ gửi IP packet cho gateway của VLAN 10. Router hoặc switch Layer 3 định tuyến rồi tạo frame mới trong VLAN 20; switch Layer 2 không tự bắc cầu trực tiếp giữa hai VLAN.</p></div>
+</section>
+<section class="section" id="stp"><h2>2. Vòng lặp tầng 2, STP/RSTP và LACP</h2>
+  <div class="concept"><h3>STP: giữ đường dự phòng mà không tạo vòng</h3>
+    <p><strong>Trước khi có:</strong> Nếu nối các switch bằng nhiều đường để dự phòng, frame broadcast hoặc unicast chưa biết đích có thể bị flood quanh vòng. Ethernet frame không có TTL như IP; các bản sao tích lũy thành broadcast storm, bảng MAC học sai cổng và LAN nghẽn.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> Spanning Tree Protocol (STP) là giao thức điều khiển ở tầng 2 chạy giữa các switch/bridge. Nó xử lý <em>topology của các cổng switch</em>, không chạy trên host và không định tuyến IP.</p>
+    <p><strong>Cách giải quyết:</strong> Switch trao đổi BPDU để bầu <em>root bridge</em> (Bridge ID gồm priority rồi MAC; số nhỏ hơn thắng). Các switch còn lại chọn đường có cost tốt nhất về root. Cổng được phân vai <em>root</em> hoặc <em>designated</em>; đường dư bị chặn để topology đang chuyển frame trở thành cây không vòng.</p>
+    <p><strong>Sau khi có:</strong> Có thể giữ cáp/link dự phòng. Khi đường đang dùng hỏng, STP tính lại cây và có thể mở cổng dự phòng.</p>
+    <p><strong>Giới hạn:</strong> Link bị chặn không chở lưu lượng dữ liệu, nên STP không cộng băng thông của các đường song song. STP cổ điển cũng có thể hội tụ chậm; loop vẫn có thể xuất hiện khi cấu hình sai hoặc BPDU không được xử lý đúng.</p>
+  </div>
+  <div class="visual"><svg viewBox="0 0 680 215" role="img" aria-label="Ba switch nối vòng; STP chặn một nhánh để tránh loop" style="width:100%;max-width:680px"><g stroke="#4c79ae" stroke-width="4" fill="none"><path d="M340 45L130 165M340 45L550 165"/><path d="M130 165L550 165" stroke="#d7774b" stroke-dasharray="12 8"/></g><g fill="#eaf1ff" stroke="#4c79ae" stroke-width="2"><rect x="275" y="15" width="130" height="60" rx="12"/><rect x="65" y="135" width="130" height="60" rx="12"/><rect x="485" y="135" width="130" height="60" rx="12"/></g><g fill="currentColor" font-size="17" text-anchor="middle"><text x="340" y="52">Root switch</text><text x="130" y="172">Switch A</text><text x="550" y="172">Switch B</text><text x="340" y="155">Một hướng bị chặn</text></g></svg><p>Đường màu cam vẫn tồn tại về vật lý nhưng không chuyển frame dữ liệu khi cây đang ổn định.</p></div>
+  <div class="concept"><h3>RSTP: phục hồi nhanh hơn khi topology đổi</h3>
+    <p><strong>Trước khi có:</strong> STP cổ điển có các giai đoạn chờ khi cổng đổi trạng thái, nên mất link có thể làm kết nối gián đoạn lâu.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> Rapid STP (802.1w, về sau tích hợp vào 802.1D) là biến thể STP trên switch tầng 2.</p>
+    <p><strong>Cách giải quyết:</strong> RSTP dùng BPDU và cơ chế đồng bộ/đề nghị–đồng ý để chuyển cổng thích hợp sang forwarding nhanh hơn. <em>Vai trò</em> cổng gồm root, designated, alternate (và backup trong một số topology); <em>trạng thái</em> cổng là discarding, learning hoặc forwarding. Alternate là đường dự phòng; discarding là trạng thái chưa chuyển frame dữ liệu.</p>
+    <p><strong>Sau khi có:</strong> Khi đường chính hỏng và điều kiện phù hợp, cổng alternate có thể thay thế nhanh hơn STP cổ điển.</p>
+    <p><strong>Giới hạn:</strong> Tốc độ hội tụ thực tế vẫn phụ thuộc topology, loại link, thiết bị và cấu hình. RSTP cũng giữ cây không vòng nên đường dư thường không tăng băng thông đang dùng.</p>
+  </div>
+  <div class="example"><h3>LACP: dùng nhiều dây như một link logic</h3><p><strong>Trước khi có:</strong> Hai dây nối song song giữa cùng các thiết bị có thể tạo loop nếu coi là hai link độc lập; STP sẽ chặn một đường. <strong>Là gì, nằm ở đâu:</strong> LACP (802.1AX) là giao thức điều khiển link aggregation giữa hai đầu kết nối, thường trên switch, router hoặc server.</p><p><strong>Cách giải quyết và lợi ích:</strong> Hai đầu thương lượng các cổng tương thích thành một nhóm logic. Nhiều luồng có thể được phân bố qua các member và còn đường dự phòng khi một member hỏng. <strong>Giới hạn:</strong> một luồng thường đi trên một member theo hash, nên 2 × 1 Gb/s không làm một luồng TCP đạt 2 Gb/s. LACP không thay thế STP cho các vòng ở phần mạng ngoài nhóm link.</p></div>
+</section>
+<section class="section" id="wifi"><h2>3. Wi-Fi: chia sóng, kết nối và định dạng frame</h2>
+  <div class="concept"><h3>Radio half-duplex, CSMA/CA và RTS/CTS</h3>
+    <p><strong>Trước khi có cơ chế chia lượt:</strong> Nhiều máy dùng cùng kênh radio; nếu cùng phát, tín hiệu chồng nhau và frame phải truyền lại. Một radio Wi-Fi thông thường không vừa phát vừa nghe để phát hiện va chạm như Ethernet half-duplex dùng CSMA/CD.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> <em>Half-duplex</em> nghĩa là trên một kênh, thiết bị luân phiên phát/nhận. CSMA/CA là cơ chế truy nhập môi trường ở tầng MAC 802.11 trên client và AP; RTS/CTS là cặp frame điều khiển tùy chọn.</p>
+    <p><strong>Cách giải quyết:</strong> Máy nghe kênh, chờ khoảng ngẫu nhiên (backoff), rồi phát; bên nhận gửi ACK nếu nhận được frame unicast đúng. Khi dùng RTS/CTS, bên phát xin lượt và bên nhận báo thời lượng để các máy nghe được nhường kênh, hữu ích khi có <em>hidden node</em> không nghe thấy nhau.</p>
+    <p><strong>Sau khi có:</strong> Các máy chia lượt phát tốt hơn và phát hiện mất frame qua thiếu ACK để thử lại.</p>
+    <p><strong>Giới hạn:</strong> CSMA/CA giảm khả năng va chạm chứ không loại bỏ hết; nhiễu và node ẩn vẫn gây truyền lại. RTS/CTS thêm overhead nên chỉ có lợi trong một số điều kiện.</p>
+  </div>
+  <div class="concept"><h3>SSID, BSSID, association và roaming</h3>
+    <p><strong>Vấn đề ban đầu:</strong> Một client cần biết mạng nào muốn vào, AP/radio cụ thể nào đang phục vụ, và cách chuyển sang AP khác khi di chuyển.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> SSID là tên mạng Wi-Fi do AP quảng bá/cấu hình; BSSID thường là MAC định danh một BSS/AP radio cụ thể. Association là việc client đăng ký với một BSSID; roaming là chuyển liên kết sang BSSID khác, thường trong cùng mạng. Các bước này nằm ở tầng 2 giữa client và AP.</p>
+    <p><strong>Cách giải quyết:</strong> Client quét beacon hoặc gửi probe, chọn BSSID, thực hiện xác thực và association; mạng bảo vệ còn thiết lập khóa. Khi tín hiệu thay đổi, client có thể chọn AP khác rồi tái liên kết.</p>
+    <p><strong>Sau khi có:</strong> Cùng một SSID có thể được nhiều AP phủ sóng, giúp thiết bị truy cập mạng khi đi giữa các khu vực.</p>
+    <p><strong>Giới hạn:</strong> SSID không phải định danh bảo mật, BSSID có thể thay đổi/giả mạo; roaming có thể làm gián đoạn ứng dụng nếu chuyển chậm, đổi IP hoặc cấu hình các AP không đồng nhất.</p>
+  </div>
+  <div class="concept"><h3>Vì sao frame 802.11 có thể cần nhiều địa chỉ MAC?</h3>
+    <p><strong>Trước khi có:</strong> Trên Ethernet có dây, hai MAC nguồn/đích thường đủ cho một chặng. Trên Wi-Fi hạ tầng, frame vừa truyền qua radio giữa client và AP, vừa đại diện cho nguồn/đích của lưu lượng đi tiếp trong hệ thống phân phối.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> Frame 802.11 là đơn vị tầng 2 trên link Wi-Fi. Nó chứa Frame Control, Duration, các trường địa chỉ tùy bit To DS/From DS, Sequence Control, payload và FCS.</p>
+    <p><strong>Cách giải quyết và lợi ích:</strong> Các trường địa chỉ tách người phát/nhận trên radio khỏi nguồn/đích logic khi cần; AP có đủ thông tin để bắc cầu frame sang phía Ethernet.</p>
+    <p><strong>Giới hạn:</strong> Không phải frame nào cũng có bốn địa chỉ. Driver thường trình bày dữ liệu bắt được như Ethernet giả lập; để quan sát beacon, association và header 802.11 gốc cần monitor mode cùng phần cứng hỗ trợ.</p>
+  </div>
+</section>
+<section class="section" id="khac"><h2>4. HDLC, PPP và PPPoE nằm ở đâu?</h2>
+  <p>Ba tên này mô tả cách đóng gói hoặc thiết lập một <strong>link</strong>. Chúng nằm dưới IP: router vẫn phải định tuyến IP packet sau khi bóc lớp link. Hình dung chuỗi truy nhập của một cấu hình ISP: <code>IP packet → PPP → PPPoE → Ethernet → ONT/đường ISP</code>; nhiều mạng khác không dùng PPPoE.</p>
+  <div class="concept"><h3>HDLC: chỉ ra ranh giới frame trên đường điểm–điểm</h3>
+    <p><strong>Trước khi có:</strong> Một luồng bit liên tục không tự nói byte nào mở đầu/kết thúc frame, nên bên nhận khó tách từng bản tin.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> HDLC là họ giao thức framing tầng 2 cho link điểm–điểm, thường gặp ở các đường nối tiếp và trong lịch sử WAN.</p>
+    <p><strong>Cách giải quyết:</strong> Cờ đánh dấu ranh giới frame; bit stuffing giúp dữ liệu không bị nhầm với cờ. Nhờ đó bên nhận tách frame và kiểm tra lỗi bằng FCS.</p>
+    <p><strong>Sau khi có:</strong> Hai đầu link có thể truyền các frame tách biệt trên một luồng bit.</p>
+    <p><strong>Giới hạn:</strong> Các biến thể HDLC không luôn tương thích với nhau; HDLC tự nó không cấp IP, chọn đường Internet hay mã hóa dữ liệu.</p>
+  </div>
+  <div class="concept"><h3>PPP: thương lượng và mang IP trên link điểm–điểm</h3>
+    <p><strong>Trước khi có:</strong> Framing đơn thuần chưa thống nhất cách hai đầu mở link, kiểm tra tùy chọn và cấu hình giao thức mạng sẽ chạy bên trên.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> Point-to-Point Protocol (PPP) là giao thức tầng 2 giữa đúng hai đầu của một link; nó có framing, LCP để thiết lập/thương lượng link và NCP để cấu hình giao thức tầng mạng như IPv4.</p>
+    <p><strong>Cách giải quyết:</strong> Hai đầu trao đổi LCP, có thể xác thực theo cấu hình, rồi dùng NCP trước khi mang IP packet trong PPP frame.</p>
+    <p><strong>Sau khi có:</strong> Link điểm–điểm có quy trình thiết lập và vận chuyển nhiều giao thức mạng một cách rõ ràng.</p>
+    <p><strong>Giới hạn:</strong> PPP không tự mã hóa và không thay IP routing; nó cần một đường truyền bên dưới. Các cơ chế xác thực cũ cũng không thay thế bảo vệ đầu cuối.</p>
+  </div>
+  <div class="concept"><h3>PPPoE: đưa phiên PPP qua hạ tầng Ethernet</h3>
+    <p><strong>Trước khi có:</strong> Nhà mạng có thể muốn quản lý phiên thuê bao bằng PPP nhưng đoạn truy nhập tới khách hàng lại là Ethernet, không phải link nối tiếp PPP trực tiếp.</p>
+    <p><strong>Là gì, nằm ở đâu:</strong> PPP over Ethernet (PPPoE) bọc PPP trong frame Ethernet giữa thiết bị khách hàng (router/CPE) và thiết bị kết thúc phiên phía ISP. Nó nằm trên Ethernet và dưới IP.</p>
+    <p><strong>Cách giải quyết:</strong> CPE khám phá thiết bị đối diện, tạo PPPoE session, rồi LCP/NCP của PPP thương lượng phiên; IP packet đi trong PPP, PPPoE và Ethernet.</p>
+    <p><strong>Sau khi có:</strong> ISP dùng hạ tầng Ethernet mà vẫn quản lý phiên và cấu hình IP qua PPP.</p>
+    <p><strong>Giới hạn:</strong> Header PPPoE + PPP thêm 8 byte, nên với Ethernet payload 1500 byte, IP MTU thường là <code>1492</code> nếu không hỗ trợ frame lớn hơn. Không phải mọi ISP dùng PPPoE; một mạng gia đình có thể dùng DHCP/IPoE.</p>
+  </div>
+</section>
+<section class="section" id="luyen-tap"><h2>5. Bài tập và bắt gói</h2><div class="exercise"><p><strong>Bài làm mẫu:</strong> PC A ở VLAN 10, PC B ở VLAN 20, cùng switch Layer 2. A biết MAC của B thì có gửi frame trực tiếp sang B được không? Vì sao?</p><details><summary>Xem lời giải</summary><p><strong>Không.</strong> Switch giữ hai VLAN là hai miền tầng 2 tách biệt. A cần gửi IP packet đến MAC của gateway VLAN 10; router/L3 switch định tuyến sang VLAN 20 rồi tạo frame mới hướng tới B. Biết MAC B không phá ranh giới VLAN.</p></details></div><div class="note"><strong>Wireshark:</strong> trên trunk được mirror, lọc <code>vlan</code> để xem VID/PCP; ở access port thường không thấy tag. Lọc <code>stp</code> để xem BPDU nếu card và vị trí bắt cho phép. Với Wi-Fi, dùng monitor mode để thấy beacon, association và địa chỉ 802.11; chỉ bắt ở interface thông thường có thể không đủ.</div></section><section class="section" id="tinh-huong-vlan"><h2>6. Thiết kế một LAN nhỏ an toàn, dễ kiểm tra</h2><div class="example"><p>Một trường có 20 máy giáo viên và 40 máy học sinh. Tạo VLAN 10 cho giáo viên, VLAN 20 cho học sinh; trên switch, cổng PC đặt access đúng VLAN. Trunk giữa các switch cho phép VLAN 10 và 20; không nên để mọi VLAN đi qua mọi trunk nếu không cần. L3 switch có interface VLAN 10 và 20 làm gateway. ACL có thể cho học sinh truy cập DNS và Internet nhưng chặn mạng quản trị giáo viên. VLAN chỉ tách broadcast domain; chính sách truy cập giữa VLAN phải do thiết bị L3/firewall thực thi.</p><p>Nếu máy học sinh không nhận DHCP, kiểm tra từng bước: cổng access có đúng VLAN 20; trunk có cho VID 20; gateway/relay DHCP của VLAN 20 có hoạt động; DHCP server có scope đúng subnet. Bắt gói ở cổng access có thể thấy frame không tag, trong khi capture trên trunk cho thấy tag VID 20. Hai hình ảnh đều đúng vì tag được thêm/bỏ theo loại cổng.</p></div><p><strong>Khi thêm đường dự phòng:</strong> nối thêm dây giữa hai switch tạo nguy cơ loop. STP sẽ chặn một đường; LACP chỉ gom link khi hai đầu được cấu hình cùng một nhóm hợp lệ. Không tự ý nối hai dây song song rồi kỳ vọng băng thông tự nhân đôi.</p></section></main><script src="assets/lesson.js"></script></body></html>
